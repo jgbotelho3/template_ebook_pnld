@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+    <package version="2.0" xmlns="http://www.idpf.org/2007/opf" unique-identifier="BookId">
+
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:title>Titulo</dc:title>
+
+        <dc:language>pt-br</dc:language>
+
+        <dc:creator opf:role="aut" opf:file-as="PNLD, Autor">Autor PNLD</dc:creator>
+
+        <dc:publisher>Editora</dc:publisher>
+
+        <dc:date>2021-08-03</dc:date>
+
+        <dc:description>Descrição da obra</dc:description>
+
+            <meta name="cover" content="cover.jpeg" />
+
+            <x-metadata>
+                <EmbeddedCover>cover.jpeg</EmbeddedCover>
+            </x-metadata>
+
+            <meta property="schema:accessibilityFeature">structuralNavigation</meta>
+
+            <meta property="schema:accessibilityFeature">tableOfContents</meta>
+
+            <meta property="schema:accessibilityAPI">ARIA</meta>
+    </metadata>
+
+    <manifest>
+        <item id="content" href="index.xhtml" media-type="application/xhtml+xml" />
+
+        <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml" />
+
+        <item id="cover" properties="cover-image" href="cover.jpeg" media-type="image/jpeg" />
+    </manifest>
+
+    <spine toc="ncx">
+        <itemref idref="content" />
+    </spine>
+    <guide>
+        <reference href="index.xhtml#toc" type="toc" title="Table of Contents" />
+    </guide>
+</package>
